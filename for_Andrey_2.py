@@ -1,0 +1,1 @@
+user = int(input())user_2 = int(input())my_set = set()# создаём библиотекуfor i in range(user):    my_set.add(input())# проверяем книги, есть ли они в библиотекеfor a in range(user_2):    enter = input()    if enter in my_set:        print('Yes')    else:        print('No')

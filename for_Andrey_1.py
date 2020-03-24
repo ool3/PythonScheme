@@ -1,0 +1,1 @@
+user = int(input())counter = 0while user > 1:    user /= 2    counter += 1if user == 1:    print(counter)else:    print("net")
