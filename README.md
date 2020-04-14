@@ -6,3 +6,4 @@ https://www.codewars.com/users/Arkadiy08122004
 ## Project on PyQt5
 I create file in my repositoriy for us. 
 You can create your file and we are together can create amazing project in `PyQt5!`
+https://github.com/ool3/Solutions/tree/master/PyQt5
