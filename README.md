@@ -8,3 +8,10 @@ I create file in my repositoriy for us.
 You can create your file and we are together can create amazing project with
 `PyQt5!`
 https://github.com/ool3/Solutions/tree/master/PyQt5
+## Tinker
+I began to study a new project! My project is related to the tinker library.
+https://github.com/ool3/Solutions/tree/master/Tinker
+
+
+You can download this library like this 
+`pip install tkinter`
