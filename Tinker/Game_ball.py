@@ -24,12 +24,12 @@ def key_pressed(event):
 def move_wrap(canvas, obj, move):
     if int(move[0]) == 0:
         canvas.move(obj, 590, 0)
-    elif int(move[0]) == 600:
-        canvas.move(obj, 0, 00)
     elif int(move[1]) == 0:
         canvas.move(obj, 0, 590)
-    elif move[-1] == 600.0:
-        canvas.move(obj, 0, 0)
+    elif int(move[0]) == 600:
+        canvas.move(obj, -590, 0)
+    else:
+        canvas.move(obj, 0, -590)
 
 
 master = tkinter.Tk()
