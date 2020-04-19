@@ -8,7 +8,7 @@ I create file in my repositoriy for us.
 You can create your file and we are together can create amazing project with
 `PyQt5!`
 https://github.com/ool3/Solutions/tree/master/PyQt5
-## Tinker
+## Tkinter
 I began to study a new project! My project is related to the tinker library.
 
 
