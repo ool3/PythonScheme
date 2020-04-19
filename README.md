@@ -12,7 +12,7 @@ https://github.com/ool3/Solutions/tree/master/PyQt5
 I began to study a new project! My project is related to the tinker library.
 
 
-https://github.com/ool3/Solutions/tree/master/Tinker
+https://github.com/ool3/Solutions/tree/master/Tkinter
 
 
 You can download this library like this 
