@@ -16,4 +16,4 @@ https://github.com/ool3/Solutions/tree/master/Tkinter
 
 
 You can download this library like this 
-`pip install tkinter`
+`pip install tkinter` or `python -m pip install tkinter`
