@@ -1,7 +1,7 @@
 import sys
 
 from PyQt5.QtWidgets import QApplication, QMainWindow, QHBoxLayout
-from Qt_design import Ui_MainWindow
+from qt import Ui_MainWindow
 
 
 # Наследуемся от виджета из PyQt5.QtWidgets и от класса с интерфейсом
@@ -10,7 +10,6 @@ class MyWidget(QMainWindow, Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
         self.default_settings()
-
         self.winner_people = True
         self.pushButton_2.clicked.connect(self.step_run)
         self.pushButton.clicked.connect(self.change_stones)
@@ -25,7 +24,9 @@ class MyWidget(QMainWindow, Ui_MainWindow):
                 if number <= 3:
                     self.lcdNumber.display(str(int(self.lcdNumber.value()) - number))
                     self.plainTextEdit.insertPlainText('Игрок взял -- {}\n'.format(number))
-                    if int(self.lcdNumber.value()):
+                    print(self.lcdNumber.value())
+                    if int(self.lcdNumber.value()) >= 1:
+                        self.check_winner()
                         self.robot_grap()
                     self.check_winner()
                 else:
@@ -34,12 +35,13 @@ class MyWidget(QMainWindow, Ui_MainWindow):
                 self.label_3.setText('Вы не ввели количество камней')
 
     def robot_grap(self):
-        if not int(self.lcdNumber.value()):
-            self.winner_people = False
-        else:
+        print('---------------------', self.lcdNumber.value())
+        if int(self.lcdNumber.value()) >= 1:
             if int(self.lcdNumber.value()) % 2 == 0:
                 self.lcdNumber.display(str(int(self.lcdNumber.value()) - 2))
                 self.plainTextEdit.insertPlainText('Компьютер взял -- 2\n')
+                if int(self.lcdNumber.value()) <= 0:
+                    self.winner_people = False
             else:
                 if int(self.lcdNumber.value()) != 1:
                     self.lcdNumber.display(str(int(self.lcdNumber.value()) - 3))
@@ -47,8 +49,9 @@ class MyWidget(QMainWindow, Ui_MainWindow):
                 else:
                     self.lcdNumber.display(str(int(self.lcdNumber.value()) - 1))
                     self.plainTextEdit.insertPlainText('Компьютер взял -- 1\n')
-            if not int(self.lcdNumber.value()):
-                self.winner_people = False
+                if int(self.lcdNumber.value()) <= 0:
+                    self.winner_people = False
+            self.check_winner()
 
     def change_stones(self):
         self.label_3.setText('')
@@ -57,7 +60,7 @@ class MyWidget(QMainWindow, Ui_MainWindow):
         self.robot_grap()
 
     def check_winner(self):
-        if not int(self.lcdNumber.value()):
+        if int(self.lcdNumber.value()) <= 0:
             if self.winner_people:
                 self.label_3.setText('Выиграл человек')
             else:
