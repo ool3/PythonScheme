@@ -1,7 +1,7 @@
 import sys
 
 from PyQt5.QtWidgets import QApplication, QMainWindow, QHBoxLayout
-from Qt_design import Ui_MainWindow
+from qt import Ui_MainWindow
 
 
 # Наследуемся от виджета из PyQt5.QtWidgets и от класса с интерфейсом
@@ -26,7 +26,6 @@ class MyWidget(QMainWindow, Ui_MainWindow):
                     self.plainTextEdit.insertPlainText('Игрок взял -- {}\n'.format(number))
                     print(self.lcdNumber.value())
                     if int(self.lcdNumber.value()) >= 1:
-                        self.check_winner()
                         self.robot_grap()
                     self.check_winner()
                 else:
