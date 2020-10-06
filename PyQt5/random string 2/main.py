@@ -2,7 +2,7 @@ import sys
 
 from PyQt5.QtWidgets import QMainWindow, QApplication
 
-from main import Ui_MainWindow
+from qt import Ui_MainWindow
 from random import choice
 
 
